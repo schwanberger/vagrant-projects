@@ -13,8 +13,6 @@
   -redoLogFileSize 50 \
   -emConfiguration NONE \
   -ignorePreReqs \
-  -databaseConfigType RAC \
-  -nodelist node1,node2 \
   -storageType ASM \
   -diskGroupName +DATA \
   -recoveryGroupName +RECO \

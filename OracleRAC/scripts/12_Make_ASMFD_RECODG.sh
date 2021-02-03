@@ -36,7 +36,7 @@ else
 fi
 
   DISKS_STRING="DISK "
-  for device in `(cd /dev/oracleafd/disks; ls ORCL_DISK*_P2)`
+  for device in `(cd /dev/oracleafd/disks; ls RECO*)`
   do
     AFDDISK="AFD:${device}"
     DISKS_STRING=${DISKS_STRING}"'$AFDDISK',"

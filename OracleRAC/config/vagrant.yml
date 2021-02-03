@@ -31,7 +31,7 @@ shared:
   asm_disk_path:
   asm_disk_num:   4
   asm_disk_size: 20
-  asm_lib_type:  'ASMLIB'
+  asm_lib_type:  'ASMFD'
   p1_ratio:      80
   # ---------------------------------------------
 
@@ -50,11 +50,11 @@ env:
   ora_languages:   en,en_GB
   # ---------------------------------------------
   nomgmtdb:        true
-  orestart:        false
+  orestart:        true
   # ---------------------------------------------
   db_name:         DB193H1
   pdb_name:        PDB1
-  db_type:         RAC
+  db_type:         SI
   cdb:             false
   # ---------------------------------------------
 

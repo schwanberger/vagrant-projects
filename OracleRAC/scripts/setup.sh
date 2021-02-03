@@ -133,14 +133,15 @@ EOF
 
 if [ "${ASM_LIB_TYPE}" == "ASMFD" ]
 then
-DISKS=`ls -dm /dev/ORCL_DISK*_p1`
+#DISKS=`ls -dm /dev/ORCL_DISK*_p1`
+DISKS="/dev/sdc1, /dev/sdd1, /dev/sde1, /dev/sdf1"
 DISKSFG=`echo $DISKS| tr ', ' ',,'`
 DISKSFG=${DISKSFG}","
 DISKS=`echo $DISKS|tr -d ' '`
 cat >> /vagrant/scripts/09_gi_installation.sh <<EOF
     oracle.install.asm.diskGroup.disksWithFailureGroupNames=${DISKSFG} \\
     oracle.install.asm.diskGroup.disks=${DISKS} \\
-    oracle.install.asm.diskGroup.diskDiscoveryString=/dev/ORCL_*,AFD:* \\
+    oracle.install.asm.diskGroup.diskDiscoveryString=/dev/sd*,AFD:* \\
     oracle.install.asm.configureAFD=true \\
 EOF
 else
@@ -242,14 +243,15 @@ EOF
 
 if [ "${ASM_LIB_TYPE}" == "ASMFD" ]
 then
-DISKS=`ls -dm /dev/ORCL_DISK*_p1`
+#DISKS=`ls -dm /dev/ORCL_DISK*_p1`
+DISKS="/dev/sdc1, /dev/sdd1, /dev/sde1, /dev/sdf1"
 DISKSFG=`echo $DISKS| tr ', ' ',,'`
 DISKSFG=${DISKSFG}","
 DISKS=`echo $DISKS|tr -d ' '`
 cat >> /vagrant/scripts/11_gi_config.sh <<EOF
     oracle.install.asm.diskGroup.disksWithFailureGroupNames=${DISKSFG} \\
     oracle.install.asm.diskGroup.disks=${DISKS} \\
-    oracle.install.asm.diskGroup.diskDiscoveryString=/dev/ORCL_*,AFD:* \\
+    oracle.install.asm.diskGroup.diskDiscoveryString=/dev/sd*,AFD:* \\
     oracle.install.asm.configureAFD=true \\
 EOF
 else
