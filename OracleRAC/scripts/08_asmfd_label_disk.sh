@@ -45,7 +45,7 @@ LETTER=`tr 0123456789 abcdefghij <<< $BOX_DISK_NUM`
 SDISKSNUM=$(ls -l /dev/${DEVICE}[${LETTER}-z]|wc -l)
 for (( i=1; i<=$SDISKSNUM; i++ ))
 do
-  DISK="DATA${i}"
+  DISK="DATATEST${i}"
   DEVICE_PATH="/dev/${DEVICE}${LETTER}1";
   ${GI_HOME}/bin/asmcmd afd_label ${DISK} ${DEVICE_PATH} --init
   LETTER=$(echo "$LETTER" | tr "0-9a-z" "1-9a-z_")
@@ -55,7 +55,7 @@ LETTER=`tr 0123456789 abcdefghij <<< $BOX_DISK_NUM`
 SDISKSNUM=$(ls -l /dev/${DEVICE}[${LETTER}-z]|wc -l)
 for (( i=1; i<=$SDISKSNUM; i++ ))
 do
-  DISK="RECO${i}"
+  DISK="RECOTEST${i}"
   DEVICE_PATH="/dev/${DEVICE}${LETTER}2";
   ${GI_HOME}/bin/asmcmd afd_label ${DISK} ${DEVICE_PATH} --init
   LETTER=$(echo "$LETTER" | tr "0-9a-z" "1-9a-z_")

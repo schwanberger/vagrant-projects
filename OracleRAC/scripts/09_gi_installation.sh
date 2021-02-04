@@ -24,7 +24,7 @@
     oracle.install.asm.diskGroup.AUSize=4 \
     oracle.install.asm.diskGroup.disksWithFailureGroupNames=/dev/sdc1,,/dev/sdd1,,/dev/sde1,,/dev/sdf1, \
     oracle.install.asm.diskGroup.disks=/dev/sdc1,/dev/sdd1,/dev/sde1,/dev/sdf1 \
-    oracle.install.asm.diskGroup.diskDiscoveryString=/dev/sd*,AFD:* \
+    oracle.install.asm.diskGroup.diskDiscoveryString=/dev/sd* \
     oracle.install.asm.configureAFD=true \
     oracle.install.asm.gimrDG.AUSize=1 \
     oracle.install.asm.monitorPassword=welcome1 \

@@ -141,7 +141,7 @@ DISKS=`echo $DISKS|tr -d ' '`
 cat >> /vagrant/scripts/09_gi_installation.sh <<EOF
     oracle.install.asm.diskGroup.disksWithFailureGroupNames=${DISKSFG} \\
     oracle.install.asm.diskGroup.disks=${DISKS} \\
-    oracle.install.asm.diskGroup.diskDiscoveryString=/dev/sd*,AFD:* \\
+    oracle.install.asm.diskGroup.diskDiscoveryString=/dev/sd* \\
     oracle.install.asm.configureAFD=true \\
 EOF
 else
@@ -251,7 +251,7 @@ DISKS=`echo $DISKS|tr -d ' '`
 cat >> /vagrant/scripts/11_gi_config.sh <<EOF
     oracle.install.asm.diskGroup.disksWithFailureGroupNames=${DISKSFG} \\
     oracle.install.asm.diskGroup.disks=${DISKS} \\
-    oracle.install.asm.diskGroup.diskDiscoveryString=/dev/sd*,AFD:* \\
+    oracle.install.asm.diskGroup.diskDiscoveryString=/dev/sd* \\
     oracle.install.asm.configureAFD=true \\
 EOF
 else
