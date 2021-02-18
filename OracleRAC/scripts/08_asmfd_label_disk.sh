@@ -61,6 +61,7 @@ do
   LETTER=$(echo "$LETTER" | tr "0-9a-z" "1-9a-z_")
 done
 
+sleep 5
 ${GI_HOME}/bin/asmcmd afd_refresh
 #----------------------------------------------------------
 # EndOfFile
